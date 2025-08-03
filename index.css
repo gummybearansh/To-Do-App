@@ -1,0 +1,165 @@
+body {
+    background-color: black;
+}
+
+#bigContainer{
+    max-width: 500px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.todo-item {
+  display: flex;
+  justify-content:space-between ;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+.todo-item:last-child {
+  border-bottom: none;
+}
+.todo-item span {
+  flex: 1; /* Text takes remaining space */
+}
+
+.header {
+    margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.main-heading {
+  font-size: 4rem; /* Large text */
+  font-weight: bold;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ce79);
+  background-size: 400%; /* Large size for smooth animation */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* Text is filled with gradient */
+  animation: gradient 8s ease infinite;
+  margin: 0;
+  margin-bottom: 5px;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 400% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.sub-heading {
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 5px;
+  font-family: 'Arial', sans-serif;
+}
+
+input[type="checkbox"] { 
+    margin-top: 20px;
+    margin-right: 5px;
+    margin-bottom: 10px;
+    appearance: none; 
+    width: 20px;
+    height: 20px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+input[type="checkbox"]:checked {
+    border-color: #28a745;
+    background-color: #28a745;
+}
+
+input[type="checkbox"]:checked::after {
+    content: '✔';
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 14px;
+}
+
+.striked {
+    font-size: 20px;
+    text-decoration: line-through;
+}
+
+.deleteBtn {
+    padding: 6px;
+  background: #ff4d4d;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.deleteBtn:hover {
+  background: #e63939;
+}
+
+.todoText {
+    font-size: 20px;   
+    /* margin-top: 10px; */
+}
+
+
+.input-container {
+    text-align: center;
+    display: flex;
+    gap: 10px;
+    max-width: 540px;
+    margin: 0 auto 20px auto; /* Center and add spacing below */
+}
+
+#inputBox {
+    /* take available space */
+    flex: 1; 
+
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+#inputBtn{
+  padding: 10px 20px;
+  background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ce79);
+  background-size: 400%; /* Large size for smooth animation */
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; /* Text is filled with gradient */
+  animation: gradient 8s ease infinite;
+  border-color: white;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+#inputBtn:hover {
+  transform: translateY(-2px);
+}
+
+#inputBtn:active {
+  transform: translateY(0);
+}

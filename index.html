@@ -4,16 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RECONCILER TODO</title>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    <header class="header">
+        <h1 class="main-heading">To Do List</h1>
+        <p class="sub-heading">Made With ❤️ by Gummybearansh</p>
+    </header>
+    <div class="input-container">
+        <input type="text" id="inputBox">
+        <button onclick="addTodo()" id="inputBtn">Add To Do</button>
+    </div>
     <div id="bigContainer">
         <div id="todoContainer">
         </div>
     </div>
-    <div>
-        <input type="text" id="inputBox">
-        <button onclick="addTodo()" id="inputBtn">Add To Do</button>
-    </div>
 </body>
-<script src="ReconcilerTODO.js"></script>
+<script src="index.js"></script>
 </html>
