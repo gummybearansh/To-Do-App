@@ -1,7 +1,9 @@
+
 body {
     background-color: black;
+    
 }
-
+ 
 #bigContainer{
     max-width: 500px;
     margin: 0 auto;

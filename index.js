@@ -50,7 +50,7 @@ function render(){
         checkBox.setAttribute("type", "checkbox");
         checkBox.setAttribute("onchange", `completed(${idx})`)
         checkBox.checked = element["completed"];
-
+ 
         const innerContent = document.createElement("h4");
         innerContent.setAttribute("class", "todoText");
         if (element["completed"]){
